@@ -1,4 +1,5 @@
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
 
 fun main(args: Array<String>) {
     Main().enable()
@@ -9,7 +10,9 @@ fun main(args: Array<String>) {
 class Main() {
 
     fun enable() {
-        val driver = ChromeDriver()
+        val options = ChromeOptions()
+        options.addArguments("user-data-dir=~/Documents/data")
+        val driver = ChromeDriver(options)
         driver.get("https://tinder.com")
     }
 
