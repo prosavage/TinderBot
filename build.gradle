@@ -7,11 +7,12 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-
+    implementation 'com.beust:klaxon:5.0.1'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
 }
 
